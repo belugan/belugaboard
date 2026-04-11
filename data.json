@@ -3,11 +3,11 @@
   "notices": [
     {
       "id": 1,
-      "title": "📢 白鲸信息办服务群",
+      "title": "📢 白鲸信息板服务群",
       "content": "Q群号1098521061。",
       "date": "2026-04-11",
       "image": "images/logo.jpg",
       "pinned": true
-    },
+    }
   ]
 }
