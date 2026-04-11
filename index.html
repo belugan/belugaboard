@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#0B3B4A">
+    <title>白鲸信息板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- 极简导航栏 -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="brand">
+                    <img class="brand-icon" src="images/logo.jpg" alt="白鲸信息板">
+                    <span class="brand-name">白鲸信息板</span>
+                </div>
+                <div class="nav-meta">
+                    <span class="update-indicator">
+                        <span class="dot"></span>
+                        <span id="updateBadge">同步中</span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 置顶区域 - 横向滑动卡片 -->
+        <section class="pinned-section" id="pinnedSection">
+            <div class="section-label">
+                <span>📌 置顶</span>
+            </div>
+            <div class="pinned-scroll" id="pinnedScroll">
+                <div class="pinned-placeholder">加载中...</div>
+            </div>
+        </section>
+
+        <!-- 信息流主体 -->
+        <main class="timeline" id="timeline">
+            <div class="timeline-placeholder">
+                <div class="wave-loader">
+                    <span></span><span></span><span></span>
+                </div>
+                <p>白鲸正在潜游...</p>
+            </div>
+        </main>
+
+        <!-- 赞助与交流区 -->
+        <section class="support-section">
+            <!-- 赞助入口卡片 -->
+            <div class="support-card" id="sponsorCard">
+                <div class="support-header">
+                    <span class="support-icon">🐋</span>
+                    <h3>支持白鲸</h3>
+                    <span class="support-arrow">›</span>
+                </div>
+                <p class="support-desc">每一份支持，都是深蓝回响</p>
+            </div>
+
+            <!-- 交流群入口 -->
+            <div class="qun-card" id="qunCard">
+                <div class="qun-left">
+                    <span class="qun-icon">💬</span>
+                    <div class="qun-info">
+                        <h4>白鲸交流群</h4>
+                        <p class="qun-number">1098521061</p>
+                    </div>
+                </div>
+                <button class="qun-copy-btn" id="copyQunBtn">复制群号</button>
+            </div>
+
+            <!-- 赞助排行榜预览 -->
+            <div class="rank-preview" id="rankPreview">
+                <div class="rank-header">
+                    <span>🏆 赞助排行榜</span>
+                    <span class="rank-more" id="showRankBtn">查看全部 ›</span>
+                </div>
+                <div class="rank-list" id="rankListPreview">
+                    <div class="rank-loading">加载中...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 简约底栏 -->
+        <footer class="page-footer">
+            <p>🐋 深蓝回响 · 每日清新</p>
+        </footer>
+    </div>
+
+    <!-- 赞助弹窗 -->
+    <div class="modal-overlay" id="sponsorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🐋 支持白鲸</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-tip">扫码支持，感谢每一份心意</p>
+                <div class="qrcode-container">
+                    <div class="qrcode-item">
+                        <img src="images/wxz.png" alt="微信赞赏码" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%23E8F0F2\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%231A5F6E\' font-size=\'14\'%3E微信赞赏码%3C/text%3E%3C/svg%3E'">
+                        <span>微信</span>
+                    </div>
+                    <div class="qrcode-item">
+                        <img src="images/alz.jpg" alt="支付宝收款码" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%23E8F0F2\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%231A5F6E\' font-size=\'14\'%3E支付宝收款码%3C/text%3E%3C/svg%3E'">
+                        <span>支付宝</span>
+                    </div>
+                </div>
+                <p class="modal-footer-tip">赞助后将显示在排行榜上</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 排行榜全屏弹窗 -->
+    <div class="modal-overlay" id="rankModal">
+        <div class="modal-content rank-modal">
+            <div class="modal-header">
+                <h3>🏆 赞助荣誉榜</h3>
+                <button class="modal-close" id="closeRankModal">&times;</button>
+            </div>
+            <div class="modal-body rank-body">
+                <div class="rank-summary">
+                    <span class="rank-total">感谢每一位支持者</span>
+                </div>
+                <div class="rank-full-list" id="rankFullList">
+                    <div class="rank-loading">加载中...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复制成功提示 -->
+    <div class="toast" id="toast">✅ 群号已复制</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

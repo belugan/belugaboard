@@ -1,0 +1,13 @@
+{
+  "lastUpdate": "2026-04-11T15:30:00",
+  "notices": [
+    {
+      "id": 1,
+      "title": "通知标题",
+      "content": "通知内容",
+      "date": "2026-04-11",
+      "image": "",
+      "pinned": true
+    }
+  ]
+}
