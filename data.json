@@ -3,51 +3,11 @@
   "notices": [
     {
       "id": 1,
-      "title": "📢 毕业典礼座位安排通知",
-      "content": "2026届毕业典礼将于4月20日在体育馆举行，各学院座位图已发至辅导员，请提前确认。",
-      "date": "2026-04-10",
-      "image": "images/graduation.jpg",
+      "title": "📢 白鲸信息办服务群",
+      "content": "Q群号1098521061。",
+      "date": "2026-04-11",
+      "image": "images/logo.jpg",
       "pinned": true
-    },
-    {
-      "id": 2,
-      "title": "⚠️ 图书馆电力检修提醒",
-      "content": "4月12日图书馆将进行电力设备检修，闭馆一天，4月13日正常开放。",
-      "date": "2026-04-09",
-      "image": "",
-      "pinned": true
-    },
-    {
-      "id": 3,
-      "title": "🌸 校园樱花季摄影展",
-      "content": "学生活动中心一楼展出优秀樱花摄影作品，展期至4月18日，欢迎参观。",
-      "date": "2026-04-08",
-      "image": "images/sakura.jpg",
-      "pinned": false
-    },
-    {
-      "id": 4,
-      "title": "🏀 院系篮球联赛半决赛",
-      "content": "计算机学院 vs 电子学院，今日下午4点体育馆，欢迎观赛。",
-      "date": "2026-04-08",
-      "image": "images/basketball.jpg",
-      "pinned": false
-    },
-    {
-      "id": 5,
-      "title": "🍱 食堂新品试吃周",
-      "content": "二食堂推出轻食窗口，沙拉、谷物碗低至12元，支持校园卡。",
-      "date": "2026-04-07",
-      "image": "",
-      "pinned": false
-    },
-    {
-      "id": 6,
-      "title": "📚 英语角本周话题",
-      "content": "本周五下午3点外语楼201，主题：Travel Stories，外教主持。",
-      "date": "2026-04-06",
-      "image": "images/english.jpg",
-      "pinned": false
     }
   ]
 }
