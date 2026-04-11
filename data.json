@@ -6,8 +6,7 @@
       "title": "有人玩我的世界2B2T服务器码",
       "content": "java版服务器，地址2b2t.fun。",
       "date": "2026-04-11",
-      //"image": "images/graduation.jpg",
-      "pinned": true
-    },
+      "pinned": false
+    }
   ]
 }
