@@ -3,11 +3,11 @@
   "notices": [
     {
       "id": 1,
-      "title": "通知标题",
-      "content": "通知内容",
+      "title": "一班反方向的问题终于要解决了",
+      "content": "",
       "date": "2026-04-11",
       "image": "",
-      "pinned": true
+      "pinned": false
     }
   ]
 }
